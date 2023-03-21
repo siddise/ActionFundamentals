@@ -36,6 +36,6 @@ jobs:
           
       - name: Get the date
         run: |
-          echo "Received date ${{ steps.date.outputs.GITHUB_OUTPUT}}"
+          echo "Received date ${{ steps.date.outputs.date}}"
 
         
