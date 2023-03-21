@@ -37,5 +37,14 @@ jobs:
       - name: Get the date
         run: |
           echo "Received date ${{ steps.date.outputs.date}}"
+  
+  greet:
+    runs-on: ubuntu-latest
 
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: ./action.yaml
+        with:
+          who-to-greet: ${{ inputs.who-to-greet }}
         
