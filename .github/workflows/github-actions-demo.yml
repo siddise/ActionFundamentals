@@ -32,10 +32,10 @@ jobs:
       - name: Set the date
         id: date
         run: |
-          echo "date=$(date)" >> "$GITHUB_OUTPUTS"
+          echo "date=$(date)" >> "$GITHUB_OUTPUT"
           
       - name: Get the date
         run: |
-          echo "Received date ${{ steps.date.outputs.output1 }}"
+          echo "Received date ${{ steps.date.outputs.* }}"
 
         
