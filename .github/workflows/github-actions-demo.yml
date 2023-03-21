@@ -11,12 +11,13 @@ on:
   workflow_dispatch:
     
 jobs:
-  Build: 
+  Build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Name of event ${{github.event_name}}"
-      - run: echo "Name of branch ${{github.ref}}"
-      
+      - run: |
+          echo "🎉 The job was triggered by event: ${{ github.event_name }}"
+          echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ."
+
       - uses: actions/checkout@v3.3.0
 
       - name: List files in the repository
