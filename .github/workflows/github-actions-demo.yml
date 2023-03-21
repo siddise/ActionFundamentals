@@ -44,7 +44,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: ./action.yml
+      - uses: ./.github/actions/action.yml
         with:
           who-to-greet: ${{ inputs.who-to-greet }}
         
